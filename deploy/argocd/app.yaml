@@ -1,19 +1,28 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo1
-  namespace: argocd
+  name: bgd-app
 spec:
+  destination:
+    namespace: bgd
+    server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: 'https://github.com/amarti43/miargocd'
-    targetRevision: HEAD
-    path: 'deploy/argocd'
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: demo1
+    path: apps/bgd/overlays/bgd
+    repoURL: https://github.com/redhat-developer-demos/openshift-gitops-examples
+    targetRevision: main
   syncPolicy:
     automated:
-      selfHeal: true
       prune: true
-
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
+  sync:
+    comparedTo:
+      destination:
+        namespace: bgd
+        server: https://kubernetes.default.svc
+      source:
+        path: apps/bgd/overlays/bgd
+        repoURL: https://github.com/redhat-developer-demos/openshift-gitops-examples
+        targetRevision: main
