@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app3
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/amarti43/miargocd'
+    targetRevision: HEAD
+    path: areas/area2/app3/overlays/desarrollo
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: app3-namespace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

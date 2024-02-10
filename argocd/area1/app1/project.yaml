@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: app1-project
+spec:
+  description: "Project for app1"
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: app1-namespace
+    server: 'https://kubernetes.default.svc'
