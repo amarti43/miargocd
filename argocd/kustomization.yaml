@@ -1,4 +1,4 @@
 # miargocd/argocd/kustomization.yaml
 resources:
-  - "./area1/app1/app.yaml"
-
+  #- "./area1/app1/app.yaml"
+  - "./area1/app1/project.yaml"
