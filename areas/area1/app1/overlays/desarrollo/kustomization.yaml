@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - ../../base
 patchesStrategicMerge:
-  - patch_deployment.yaml
+  - "./patch_deployment.yaml"
