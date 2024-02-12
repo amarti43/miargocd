@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app1-container
-        image: bhargavshah86/kube-test:v0.1
+        image: registry.access.redhat.com/ubi8/httpd-24:1-299
         ports:
-        - containerPort: 80
+        - containerPort: 8080
