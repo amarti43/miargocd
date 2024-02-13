@@ -3,4 +3,9 @@ kind: Kustomization
 resources:
   - ../../base
 patches:
-  - path: "patch_deployment.yaml"
+  - path: patch_deployment.yaml
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: app1-deployment-pruebas
