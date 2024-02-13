@@ -8,4 +8,4 @@ patches:
       group: apps
       version: v1
       kind: Deployment
-      name: app1-deployment  # Este nombre debe coincidir exactamente con el nombre en tu base
+      name: app1-deployment-pruebas
