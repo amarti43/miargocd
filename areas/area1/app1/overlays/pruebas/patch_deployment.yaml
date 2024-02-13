@@ -1,11 +1,11 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app1-pruebas
-spec:
-  replicas: 2
-  template:
-    spec:
-      containers:
-      - name: app1-container
-        image: mi-repositorio/app1:desarrollo
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+patches:
+  - path: patch_deployment.yaml
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: app1-deployment  # Este nombre debe coincidir exactamente con el nombre en tu base
