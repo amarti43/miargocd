@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/instance: app1-produccion
 spec:
-  host: mi-ruta-app1-produccion.apps.ocp.local
+  host: app1-desarrollo.apps.ocp.local
   to:
     kind: Service
     name: app1-service-pruebas
