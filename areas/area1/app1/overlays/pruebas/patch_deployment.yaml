@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: app1-container
-        image: mi-repositorio/app1:desarrollo
+        image: quay.io/redhattraining/hello-world-nginx:latest
