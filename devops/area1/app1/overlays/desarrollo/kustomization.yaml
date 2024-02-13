@@ -9,7 +9,7 @@ patches:
       version: v1
       kind: Deployment
       name: app1-deployment
-- path: patch_route_host.yaml 
+  - path: patch_route_host.yaml 
     target:
       group: route.openshift.io
       version: v1
