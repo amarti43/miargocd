@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app1-produccion
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/amarti43/miargocd'
+    targetRevision: HEAD
+    path: areas/area1/app1/overlays/produccion
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: app1-produccion
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
