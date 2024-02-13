@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app2
+  name: app2-desarrollo
 spec:
   project: default
   source:
@@ -10,7 +10,7 @@ spec:
     path: areas/area1/app2/overlays/desarrollo
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: app2-namespace
+    namespace: app2-desarrollo
   syncPolicy:
     automated:
       prune: true
