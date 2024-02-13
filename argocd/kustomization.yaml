@@ -5,6 +5,7 @@ resources:
 ##############
   - "./area1/app1/app1-desarrollo.yaml"
   - "./area1/app1/app1-pruebas.yaml"
+  - "./area1/app1/app1-produccion.yaml"  
 
 
 
