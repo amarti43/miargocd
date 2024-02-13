@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"argoproj.io/v1alpha1","kind":"Application","metadata":{"annotations":{},"name":"argocd","namespace":"openshift-gitops"},"spec":{"destination":{"namespace":"openshift-gitops","server":"https://kubernetes.default.svc"},"project":"default","source":{"path":"argocd","repoURL":"https://github.com/amarti43/miargocd","targetRevision":"HEAD"},"syncPolicy":{"automated":{"prune":true,"selfHeal":true}}}}
+  name: argocd
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: argocd
+    repoURL: https://github.com/amarti43/miargocd
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
