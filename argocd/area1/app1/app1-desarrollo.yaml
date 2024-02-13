@@ -11,7 +11,7 @@ spec:
     path: devops/area1/app1/overlays/desarrollo
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: app1-namespace
+    namespace: app1-desarrollo
   syncPolicy:
     automated:
       prune: true
