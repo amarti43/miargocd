@@ -1,4 +1,15 @@
 # miargocd/argocd/kustomization.yaml
 resources:
+##############
+### APP1
+##############
   - "./area1/app1/app1-desarrollo.yaml"
-  #- "./area1/app2/app.yaml"
+  - "./area1/app1/app1-pruebas.yaml"
+
+
+
+##############
+### APP2
+##############
+  #- "./area1/app2/app2-desarrollo.yaml"
+  #- "./area1/app2/app2-pruebas.yaml"
