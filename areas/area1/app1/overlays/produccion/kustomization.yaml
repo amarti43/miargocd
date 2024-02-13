@@ -8,4 +8,4 @@ patches:
       group: apps
       version: v1
       kind: Deployment
-      name: app1-deployment-produccion
+      name: app1-deployment
