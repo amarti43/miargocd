@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/amarti43/miargocd'
     targetRevision: HEAD
-    path: areas/area1/app1/overlays/produccion
+    path: devops/area1/app1/overlays/produccion
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: app1-produccion
